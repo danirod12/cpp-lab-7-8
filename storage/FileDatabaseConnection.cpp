@@ -28,7 +28,7 @@ void FileDatabaseConnection::init() {
 }
 
 LinkedList<const char> FileDatabaseConnection::read(unsigned int length, unsigned int compareOffset,
-                                        unsigned int compareLength, const char *compareData) {
+                                                    unsigned int compareLength, const char *compareData) {
     if (compareOffset + compareLength > length) {
         throw std::invalid_argument("Incorrect comparison requirement");
     }
@@ -108,7 +108,7 @@ FileDatabaseConnection::read(unsigned int length, unsigned int compareOffsetAmou
 
 unsigned int FileDatabaseConnection::write(unsigned int length, char *data) {
     return this->write(length, 0, sizeof(int),
-                data, 0, length, data);
+                       data, 0, length, data);
 }
 
 unsigned int FileDatabaseConnection::write(unsigned int length, unsigned int compareOffset, unsigned int compareLength,

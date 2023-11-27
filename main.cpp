@@ -484,7 +484,7 @@ char *getAccountFormatted(unsigned int id) {
         }
         default: {
             // Again we cannot use std::string (Mr. Bulgakov uses on lectures already !!!)
-            int digits= snprintf(nullptr, 0, "%d", id);
+            int digits = snprintf(nullptr, 0, "%d", id);
             array = new char[digits];
             snprintf(array, digits + 1, "%d", id);
 
